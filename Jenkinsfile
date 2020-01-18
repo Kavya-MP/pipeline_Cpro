@@ -32,7 +32,7 @@ stages {
 							echo -e "**************** ERROR *********************\n"
 							echo "Build failure - No executable file generated"
 							echo -e "********************************************\n"
-							// exit 1
+							 exit 1
 						fi    
 
 						echo -e "\n************************************************************************** "
@@ -63,13 +63,13 @@ stages {
 					  echo -e "**************** ERROR *********************\n"
 					  echo "Deployment failure - ABC.exe cannot be executed "
 					  echo -e "********************************************\n"
-					//  exit 1
+					  exit 1
 				fi
 				else 
 					 echo -e "**************** ERROR *********************\n"
 					  echo "Build - ABC.exe notfound $file "
 					  echo -e "********************************************\n"
-					//  exit 1
+					  exit 1
 				fi
 				'''
             }
@@ -101,7 +101,7 @@ stages {
 						echo -e "\n      RESULT -> TEST_CASE (${count}): SUCCESS" 
 					else  
 						echo -e "\n      RESULT -> TEST_CASE (${count}): FAILED"
-					//	exit 1
+						exit 1
 					fi
 
 					echo "-------------------------------------------------------------------"
@@ -111,7 +111,7 @@ stages {
 					 echo -e "**************** ERROR *********************\n"
 					  echo "Build - ABC.exe notfound $file "
 					  echo -e "********************************************\n"
-					//  exit 1
+					  exit 1
 				fi
 				'''
 					}
